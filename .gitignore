@@ -1,0 +1,21 @@
+# macOS 系统文件 / macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# 编辑器与临时文件 / Editor & temp files
+*.swp
+*~
+*.bak
+*.tmp
+
+# 日志或执行输出 / Logs & generated outputs
+install.log
+
+# 不纳入版本控制的敏感目录/文件 / Sensitive assets to exclude
+secrets/
+secret/
+*.key
+*.pem
