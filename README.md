@@ -4,8 +4,6 @@
 
 将原本散落在 `$HOME` 下的设置（例如 `~/.config/nvim`、`~/.config/wezterm`、`~/.tmux.conf` 等）迁移到此处，并通过软链接保持与系统实际位置一致。Migrate settings originally scattered under `$HOME` (e.g., `~/.config/nvim`, `~/.config/wezterm`, `~/.tmux.conf`) and keep them linked back to their actual locations via symlinks.
 
-## 目录 / Structure
-
 ```plain
 dotfiles/
 ├── README.md
