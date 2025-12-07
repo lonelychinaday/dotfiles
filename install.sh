@@ -17,6 +17,7 @@ ITEMS=(
   ".config/wezterm"
   ".config/starship.toml"
   ".tmux.conf"
+  ".zshrc"
 )
 
 log() {
