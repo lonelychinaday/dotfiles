@@ -70,7 +70,18 @@ return {
         history_bonus = false, -- give more weight to chronological order
       },
       sources = {
+        -- 默认启用隐藏文件搜索
+        files = {
+          hidden = true,
+          exclude = { "**/.git/**", "**/node_modules/**" },
+        },
+        grep = {
+          hidden = true,
+          exclude = { "**/.git/**", "**/node_modules/**" },
+        },
         explorer = {
+          hidden = true,
+          exclude = { "**/.git/**", "**/node_modules/**" },
           finder = "explorer",
           supports_live = true,
           ui_select = true,

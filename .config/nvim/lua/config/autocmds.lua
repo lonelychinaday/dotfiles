@@ -58,6 +58,10 @@ local function apply_colorscheme_highlights()
   set_highlights({
     -- 高亮当前行
     CursorLine = { bg = colors.get("surface_cursorline") },
+    -- 渲染 markdown 代码块背景
+    RenderMarkdownCodeBlock = { bg = colors.get("surface_float") },
+    RenderMarkdownCodeBorder = { bg = colors.get("surface_float") },
+    RenderMarkdownCodeInline = { bg = colors.get("surface_float") },
     -- 高亮当前行的行号
     CursorLineNr = { fg = colors.get("accent_primary"), bold = true },
     -- 补全菜单
