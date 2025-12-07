@@ -1,0 +1,214 @@
+local colors = require("utils.colors")
+
+return {
+  -- "akinsho/bufferline.nvim",
+  -- lazy = false,
+  -- dependencies = { "nvim-tree/nvim-web-devicons" },
+  -- config = function()
+  --   local bufferline = require("bufferline")
+  --
+  --   local highlights_color = colors.get("surface_panel")
+  --
+  --   bufferline.setup({
+  --     options = {
+  --       offsets = {
+  --         {
+  --           filetype = "NvimTree",
+  --           text = "File Explorer",
+  --           text_align = "left",
+  --           separator = false,
+  --           highlight = "Directory",
+  --         },
+  --       },
+  --       diagnostics = "nvim_lsp",
+  --       diagnostics_indicator = function(_, _, diagnostics_dict, _)
+  --         if not diagnostics_dict then
+  --           return ""
+  --         end
+  --
+  --         local indicator = ""
+  --         if diagnostics_dict.error and diagnostics_dict.error > 0 then
+  --           indicator = indicator .. ""
+  --         elseif diagnostics_dict.warning and diagnostics_dict.warning > 0 then
+  --           indicator = indicator .. ""
+  --         elseif diagnostics_dict.hint and diagnostics_dict.hint > 0 then
+  --           indicator = indicator .. ""
+  --         elseif diagnostics_dict.info and diagnostics_dict.info > 0 then
+  --           indicator = indicator .. "󰋽"
+  --         end
+  --
+  --         return indicator
+  --       end,
+  --
+  --       numbers = "none", -- 缓冲区编号
+  --       close_icon = "", -- 关闭按钮图标
+  --       buffer_close_icon = "", -- 缓冲区关闭图标
+  --       separator_style = { "", "" }, -- 分隔符样式
+  --       indicator = { -- 指示器
+  --         style = "none",
+  --         icon = "",
+  --       },
+  --       style_preset = { -- 预设样式
+  --         -- bufferline.style_preset.no_italic, -- 禁用斜体
+  --       },
+  --       always_show_bufferline = true, -- 始终显示 bufferline
+  --     },
+  --     highlights = {
+  --       fill = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       background = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       buffer = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       buffer_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --
+  --       close_button = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       close_button_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       close_button_selected = {
+  --         bg = highlights_color,
+  --       },
+  --
+  --       indicator_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       indicator_selected = {
+  --         bg = highlights_color,
+  --       },
+  --
+  --       modified_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       separator_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       numbers_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       diagnostic_selected = {
+  --         bg = highlights_color,
+  --       },
+  --
+  --       duplicate_selected = {
+  --         fg = colors.get("neutral_graphite"),
+  --         bg = highlights_color,
+  --       },
+  --
+  --       -- error
+  --       error = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       error_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       error_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       error_diagnostic = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       error_diagnostic_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       error_diagnostic_selected = {
+  --         bg = highlights_color,
+  --       },
+  --
+  --       -- warning
+  --       warning = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       warning_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       warning_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       warning_diagnostic = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       warning_diagnostic_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       warning_diagnostic_selected = {
+  --         bg = highlights_color,
+  --       },
+  --
+  --       -- hint
+  --       hint = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       hint_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       hint_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       hint_diagnostic = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       hint_diagnostic_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       hint_diagnostic_selected = {
+  --         bg = highlights_color,
+  --       },
+  --
+  --       -- info
+  --       info = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       info_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       info_selected = {
+  --         bg = highlights_color,
+  --       },
+  --       info_diagnostic = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       info_diagnostic_visible = {
+  --         bg = colors.get("surface_base"),
+  --       },
+  --       info_diagnostic_selected = {
+  --         bg = highlights_color,
+  --       },
+  --     },
+  --   })
+  -- end,
+  -- keys = {
+  --   {
+  --     "<leader>bh",
+  --     "<Cmd>BufferLineCyclePrev<CR>",
+  --     silent = true,
+  --   },
+  --   {
+  --     "<leader>bl",
+  --     "<Cmd>BufferLineCycleNext<CR>",
+  --     silent = true,
+  --   },
+  --   {
+  --     "<leader>bp",
+  --     "<Cmd>BufferLinePick<CR>",
+  --     silent = true,
+  --   },
+  --   {
+  --     "<leader>bd",
+  --     "<Cmd>bdelete<CR>",
+  --     silent = true,
+  --   },
+  --   {
+  --     "<leader>bo",
+  --     "<Cmd>BufferLineCloseOtherBuffers<CR>",
+  --     silent = true,
+  --   },
+  -- },
+}

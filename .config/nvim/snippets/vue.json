@@ -1,0 +1,16 @@
+{
+    "vue sfc template": {
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "  <div>${1:aaaa}</div>",
+            "</template>",
+            "",
+            "<script setup lang=\"ts\"></script>",
+            "",
+            "<style scoped lang=\"scss\"></style>",
+            ""
+        ],
+        "description": "vue sfc template"
+    }
+}

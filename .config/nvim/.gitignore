@@ -1,0 +1,10 @@
+# Neovim
+*.swp
+*.swo
+*.swn
+.netrwhist
+*~
+
+# OS
+.DS_Store
+Thumbs.db

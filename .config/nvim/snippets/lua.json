@@ -1,0 +1,9 @@
+{
+    "lua print": {
+        "prefix": "p",
+        "body": [
+            "print(\"${1}\")"
+        ],
+        "description": "function print"
+    }
+}
