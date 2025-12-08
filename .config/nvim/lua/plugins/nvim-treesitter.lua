@@ -20,6 +20,7 @@ return {
             "lua",
             "markdown",
             "markdown_inline",
+            "typst",
         },
         highlight = {
             enable = true, -- 启用高亮

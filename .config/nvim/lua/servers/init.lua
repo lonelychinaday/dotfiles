@@ -8,6 +8,7 @@ require("servers.vtsls")(capabilities)
 require("servers.vue_ls")(capabilities)
 require("servers.cssls")(capabilities)
 require("servers.tailwindcss")(capabilities)
+require("servers.typst")(capabilities)
 
 vim.lsp.enable({
   'lua_ls',
@@ -15,4 +16,5 @@ vim.lsp.enable({
   'vue_ls',
   'cssls',
   'tailwindcss',
+  'tinymist',
 })

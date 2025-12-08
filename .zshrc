@@ -70,6 +70,7 @@ path_prepend "$HOME/bin"
 path_prepend "/usr/local/bin"
 path_prepend "$HOME/.codeium/windsurf/bin"
 path_prepend "$HOME/.antigravity/antigravity/bin"
+path_prepend "$HOME/.local/share/nvim/mason/bin"
 path_append "/Applications/WezTerm.app/Contents/MacOS"
 export PATH
 

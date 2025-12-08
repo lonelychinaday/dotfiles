@@ -9,7 +9,7 @@ return {
             javascriptreact = { "eslint_d" },
             typescriptreact = { "eslint_d" },
             vue = { "eslint_d" },
-            lua = { "luacheck" }
+            lua = { "luacheck" },
         }
         local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
         vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

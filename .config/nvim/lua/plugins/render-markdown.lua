@@ -2,6 +2,7 @@ return {
   "MeanderingProgrammer/render-markdown.nvim",
   dependencies = { "nvim-mini/mini.icons", "nvim-tree/nvim-web-devicons" },
   opts = {},
+  ft = "markdown",
   config = function()
     require("render-markdown").setup({
       callout = {

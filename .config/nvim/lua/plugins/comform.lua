@@ -16,6 +16,7 @@ return {
                 typescriptreact = { "prettierd" },
                 lua = { "stylua" },
                 markdown = { "prettierd" },
+                typst = { "tinymist" },
             },
             format_on_save = {
                 lsp_fallback = true,
