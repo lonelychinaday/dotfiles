@@ -112,7 +112,6 @@ local KEY_GROUPS = {
       { "<C-b>", desc = "向上滚动一屏" },
       { "<C-e>", desc = "向下滚动一行" },
       { "<C-y>", desc = "向上滚动一行" },
-      { "<C-/>", desc = "切换终端(snacks terminal)" },
 
       -- 补全操作
       { "<C-j>", desc = "下一个补全项(blink.cmp)", mode = "c" },
@@ -222,7 +221,8 @@ local KEY_GROUPS = {
   {
     label = "Alt 系列",
     mappings = {
-      { "<M>", group = "选区移动", icon = { icon = "󰆾", color = "blue" } },
+      { "<M>", group = "其他", icon = { icon = "󰆾", color = "blue" } },
+      { "<M-`>", desc = "切换终端(snacks terminal)", icon = { icon = "", color = "orange" } },
       { "<M-Left>", desc = "向左移动", icon = { icon = "", color = "blue" } },
       { "<M-Right>", desc = "向右移动", icon = { icon = "", color = "blue" } },
       { "<M-Down>", desc = "向下移动", icon = { icon = "", color = "blue" } },

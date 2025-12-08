@@ -142,7 +142,23 @@ return {
     quickfile = { enabled = true },
     scope = { enabled = true, priority = 200, underline = true, only_current = false },
     scroll = { enabled = true },
-    terminal = { enabled = true },
+
+    terminal = {
+      enabled = true,
+      win = {
+        style = "terminal",
+        position = "float",
+        relative = "editor",
+        width = 0.8,
+        height = 0.8,
+        border = "hpad",
+        backdrop = 80,
+        wo = {
+          winhighlight = "NormalFloat:SnacksNormalFloat,FloatBorder:SnacksFloatBorder",
+        },
+      },
+    },
+
     statuscolumn = { enabled = true },
     words = { enabled = true },
 
@@ -379,10 +395,15 @@ return {
       end,
     },
     {
-      "<c-`>",
+      "<M-`>",
       function()
+        if vim.api.nvim_get_mode().mode == "t" then
+          vim.cmd("stopinsert")
+        end
         require("snacks").terminal.toggle()
       end,
+      mode = { "n", "t" },
+      desc = "Toggle Snacks terminal",
     },
 
     {

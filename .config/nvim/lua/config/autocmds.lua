@@ -88,10 +88,9 @@ local function apply_colorscheme_highlights()
     -- 窗口栏
     WinBar = { bg = colors.get("neutral_gray_dark") },
     WinBarNC = { bg = colors.get("neutral_gray_dark") },
-    -- 窗口分隔线
-    WinSeparator = {
-      fg = colors.get("neutral_gray"), -- 窗口分隔线颜色
-    },
+    -- Snacks 终端浮窗背景
+    SnacksNormalFloat = { bg = colors.get("surface_float") },
+    SnacksFloatBorder = { bg = colors.get("surface_float") },
     -- 缩进线颜色
     SnacksIndentLevel1 = { fg = colors.get("neutral_gray_dark") },
     SnacksIndentLevel2 = { fg = colors.get("neutral_gray_dark") },
@@ -202,3 +201,4 @@ end
 
 -- 初始化时同步一次高亮，避免启动后颜色缺失
 apply_colorscheme_highlights()
+

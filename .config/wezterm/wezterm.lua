@@ -104,8 +104,14 @@ config = {
 	color_scheme = "Vs Code Dark+ (Gogh)",
 
 	-- 字体
-	font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" }),
-	font_size = 12.5,
+	font = wezterm.font_with_fallback({
+		{ family = "JetBrainsMono Nerd Font", weight = "Regular" },
+		-- { family = "苹方-简", scale = 1.05, style = "Normal" },
+		-- { family = "等距更纱黑体 SC", scale = 1.0 },
+		{ family = "霞鹜文楷等宽" },
+	}),
+	font_size = 12,
+	cell_width = 1.0,
 	-- text_background_opacity = 0.25,
 
 	-- 背景
