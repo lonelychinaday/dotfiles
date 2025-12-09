@@ -86,6 +86,18 @@ export PATH
 alias vim="nvim"
 alias p="pnpm"
 
+# alias | grep git
+
+# alias gss = "git status --short"
+# alias ga = "git add"
+# alias gaa = "git add --all"
+# alias gapa = "git add --patch"
+# alias gcmsg = "git commit --message"
+# alias gl = "git pull"
+# alias gp = "git push"
+# glola='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all'
+# alias gb = "git branch"
+
 # ===============================================
 # 提示符与其他工具 / Prompt & additional tooling
 # ===============================================

@@ -16,6 +16,7 @@ ITEMS=(
   ".config/nvim"
   ".config/wezterm"
   ".config/starship.toml"
+  ".config/git"
   ".tmux.conf"
   ".zshrc"
 )

@@ -1,0 +1,128 @@
+[user]
+  name = lonelychinaday
+  email = jmzzxr@gmail.com
+  # signingKey = xxxxxxx
+
+[core]
+  # 压缩级别 (0-9)，9 为最高压缩率
+  compression = 9
+  # 将空白字符错误视为致命错误
+  whitespace = error
+  # 预加载索引以加快操作速度
+  preloadindex = true
+  # 建议添加全局忽略文件配置，例如：
+  # excludesfile = ~/.gitignore
+
+[advice]
+  # 禁止添加空路径的建议
+  addEmptyPathspec = false
+  # 禁止非快进推送的建议
+  pushNonFastForward = false
+  # 禁止状态提示
+  statusHints = false
+
+# URL 缩写配置
+# 使用 lcd: 代替 git@github.com:lonelychinaday/
+[url "git@github.com:lonelychinaday/"]
+  insteadOf = "lcd:"
+
+# 使用 gh: 代替 git@github.com:
+[url "git@github.com:"]
+  insteadOf = "gh:"
+
+[init]
+  # 默认主分支名称
+  defaultBranch = master
+
+[status]
+  # 显示分支信息
+  branch = true
+  # 显示暂存区信息
+  showStash = true
+  # 显示所有未跟踪文件
+  showUntrackedFiles = all
+
+[diff]
+  # 上下文显示行数
+  context = 3
+  # 检测重命名和拷贝
+  renames = copies
+  # 两个 hunk 之间如果小于 10 行则合并显示
+  interHunkContext = 10
+
+[pager]
+  # 使用 diff-so-fancy 美化 diff 输出
+  # 注意：需要先安装 diff-so-fancy (brew install diff-so-fancy)
+  diff = diff-so-fancy | $PAGER
+
+[diff-so-fancy]
+  # 不标记空行
+  markEmptyLines = false
+
+[color "diff"]
+  meta = black bold
+  frag = magenta
+  context = white
+  whitespace = yellow reverse
+  old = red
+
+[interactive]
+  # 交互式模式下的 diff 过滤器
+  diffFilter = diff-so-fancy --patch
+  singleKey = true
+
+[push]
+  # 推送当前分支到同名远程分支
+  default = current
+
+[pull]
+  # 拉取时只更新当前分支
+  default = current
+
+[log]
+  # 使用短 commit hash
+  abbrevCommit = true
+  # log 图形颜色配置
+  graphColors = blue,yellow,cyan,magenta,green,red
+
+[color "decorate"]
+  HEAD = red
+  branch = blue
+  tag = yellow
+  remoteBranch = magenta
+
+[branch]
+  # 分支排序，按提交时间倒序
+  sort = -committerdate
+
+[color "branch"]
+  current = magenta
+  local = default
+  remote = yellow
+  upstream = green
+  plain = blue
+
+[tag]
+  # 标签排序，按打标签时间倒序
+  sort = -taggerdate
+
+[pager]
+  # 分支和标签列表不使用分页器
+  branch = false
+  tag = false
+
+[commit]
+  # 开启 GPG 签名
+  # 如果没有配置 GPG Key，这会导致提交失败
+  # gpgSign = true
+  
+  # 提交信息模板
+  template = ~/.config/git/message
+
+[http]
+  # HTTP 代理设置
+	proxy = http://127.0.0.1:7897
+  
+[https]
+  # HTTPS 代理设置
+	proxy = http://127.0.0.1:7897
