@@ -66,6 +66,67 @@ wezterm.on("window-config-reloaded", function(window, pane)
 	end
 end)
 
+
+-- The filled in variant of the < symbol
+local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
+
+-- The filled in variant of the > symbol
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
+
+-- This function returns the suggested title for a tab.
+-- It prefers the title that was set via `tab:set_title()`
+-- or `wezterm cli set-tab-title`, but falls back to the
+-- title of the active pane in that tab.
+function tab_title(tab_info)
+  local title = tab_info.tab_title
+  -- if the tab title is explicitly set, take that
+  if title and #title > 0 then
+    return title
+  end
+  -- Otherwise, use the title from the active pane
+  -- in that tab
+  return tab_info.active_pane.title
+end
+
+wezterm.on(
+  'format-tab-title',
+  function(tab, tabs, panes, config, hover, max_width)
+    local edge_background = '#1F1F1F'
+    local background = '#1F1F1F'
+    local foreground = '#808080'
+
+    if tab.is_active then
+      background = '#7E56C2'
+      foreground = '#ffffff'
+    elseif hover then
+      background = '#3b3052'
+      foreground = '#ffffff'
+    end
+
+    local edge_foreground = background
+
+    local title = tab_title(tab)
+
+    -- ensure that the titles fit in the available space,
+    -- and that we have room for the edges.
+    title = wezterm.truncate_right(title, max_width - 2)
+
+    return {
+      { Background = { Color = edge_background } },
+      { Foreground = { Color = edge_foreground } },
+      { Text = SOLID_LEFT_ARROW },
+      { Background = { Color = background } },
+      { Foreground = { Color = foreground } },
+      { Text = title },
+      { Background = { Color = edge_background } },
+      { Foreground = { Color = edge_foreground } },
+      { Text = SOLID_RIGHT_ARROW },
+    }
+  end
+)
+
+
+
 config = wezterm.config_builder()
 
 -- `wezterm ls-fonts --list-system`
@@ -86,10 +147,10 @@ config = {
 
 	-- 标签页
 	enable_tab_bar = false,
-	hide_tab_bar_if_only_one_tab = true,
+	hide_tab_bar_if_only_one_tab = false,
 	use_fancy_tab_bar = false,
 	show_new_tab_button_in_tab_bar = false,
-	tab_bar_at_bottom = true,
+	tab_bar_at_bottom = false,
 	tab_max_width = 40,
 	show_tab_index_in_tab_bar = false,
 
@@ -148,6 +209,28 @@ config = {
 		-- 	mods = "CMD|SHIFT",
 		-- 	action = wezterm.action.CloseCurrentPane({ confirm = false }),
 		-- },
+	},
+
+	colors = {
+		tab_bar = {
+			active_tab = {
+				bg_color = "#7E56C2",
+				fg_color = "#ffffff",
+				intensity = "Bold",
+				underline = "None",
+				italic = false,
+				strikethrough = false
+			},
+			background = "#1F1F1F",
+		},
+	},
+
+	tab_bar_style = {
+		-- active_tab_left = wezterm.format({
+		-- 	{ Background = { Color = '#ff0000' } },
+		-- 	{ Foreground = { Color = '#2b2042' } },
+		-- 	{ Text = SOLID_LEFT_ARROW },
+		-- }),
 	},
 }
 

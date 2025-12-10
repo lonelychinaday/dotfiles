@@ -4,7 +4,8 @@
 
 # 基础信息 / Base info
 export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="miloshadzic"  # 默认主题 / Default theme
+# ZSH_THEME="random"  # 默认主题 / Default theme
+ZSH_THEME="avit"  # 默认主题 / Default theme
 
 # 插件配置 / Plugins configuration
 plugins=(
@@ -102,4 +103,4 @@ alias p="pnpm"
 # 提示符与其他工具 / Prompt & additional tooling
 # ===============================================
 
-eval "$(starship init zsh)"  # 启用 Starship / Enable Starship prompt
+# eval "$(starship init zsh)"  # 启用 Starship / Enable Starship prompt
