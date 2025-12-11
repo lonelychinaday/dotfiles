@@ -117,3 +117,5 @@ function y() {
 
 
 # eval "$(starship init zsh)"  # 启用 Starship / Enable Starship prompt
+
+eval "$(zoxide init --cmd cd zsh)"
