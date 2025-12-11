@@ -5,7 +5,7 @@ return {
     ---@type string|fun()
     -- colorscheme = "catppuccin",
     colorscheme = function()
-      require("tokyonight").load()
+      require("catppuccin").load()
     end,
 
     -- load the default settings

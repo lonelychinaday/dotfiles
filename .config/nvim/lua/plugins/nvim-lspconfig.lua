@@ -72,24 +72,6 @@ return {
         -- Add keymaps for all LSP servers:
         keys = {},
       },
-      vtsls = {
-        -- Add keymaps for specific LSP servers:
-        keys = {
-          {
-            "<leader>co",
-            function()
-              vim.lsp.buf.code_action({
-                apply = true,
-                context = {
-                  only = { "source.organizeImports" },
-                  diagnostics = {},
-                },
-              })
-            end,
-            desc = "Organize Imports",
-          },
-        },
-      },
     },
 
     -- you can do any additional lsp server setup here
