@@ -1,22 +1,3 @@
-# StyLua 配置文件 - Neovim 配置项目
-
-# 列宽限制
-column_width = 120
-
-# 缩进类型：Spaces（空格）或 Tabs（制表符）
 indent_type = "Spaces"
-
-# 缩进宽度
 indent_width = 2
-
-# 行尾类型：Unix（LF）或 Windows（CRLF）
-line_endings = "Unix"
-
-# 引号样式：AutoPreferDouble（自动，优先双引号）、AutoPreferSingle、ForceDouble、ForceSingle
-quote_style = "AutoPreferDouble"
-
-# 调用括号样式：Always（总是）、NoSingleString、NoSingleTable、None、Input
-call_parentheses = "Always"
-
-# 折叠简单语句（如 if-then-end）到一行
-collapse_simple_statement = "Never"
+column_width = 120
