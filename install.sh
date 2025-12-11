@@ -15,6 +15,7 @@ DOTFILES_DIR=${DOTFILES:-$SCRIPT_DIR}
 ITEMS=(
   ".config/nvim"
   ".config/wezterm"
+  ".config/yazi"
   ".config/starship.toml"
   ".config/git"
   ".tmux.conf"

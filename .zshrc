@@ -103,4 +103,17 @@ alias p="pnpm"
 # 提示符与其他工具 / Prompt & additional tooling
 # ===============================================
 
+
+export EDITOR="nvim"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
+
+
+
 # eval "$(starship init zsh)"  # 启用 Starship / Enable Starship prompt
