@@ -67,6 +67,8 @@ path_append() {  # 将目录附加到 PATH 尾部 / Append directory to PATH
 }
 
 # PATH 统一配置 / Consolidated PATH setup
+export PNPM_HOME="/Users/huanghexiang/Library/pnpm"
+path_prepend "$PNPM_HOME"
 path_prepend "$HOME/bin"
 path_prepend "/usr/local/bin"
 path_prepend "$HOME/.codeium/windsurf/bin"
