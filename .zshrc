@@ -75,6 +75,11 @@ path_prepend "$HOME/.local/share/nvim/mason/bin"
 path_append "/Applications/WezTerm.app/Contents/MacOS"
 export PATH
 
+# NVM Configuration (必须 source 脚本以加载 nvm 函数 / Must source script to load nvm function)
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 # ===============================================
 # 扩展函数占位 / Function placeholders
 # ===============================================
