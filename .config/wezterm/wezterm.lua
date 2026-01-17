@@ -62,7 +62,8 @@ wezterm.on("window-config-reloaded", function(window, pane)
 	seen[id] = true
 	wezterm.GLOBAL.seen_windows = seen
 	if is_new_window then
-		window:set_position(1285, 630)
+		-- window:set_position(1285, 630)
+		window:set_position(480, 210)
 	end
 end)
 
@@ -192,7 +193,7 @@ config = {
 
 	-- 初始窗口大小
 	initial_rows = 40,
-	initial_cols = 130,
+	initial_cols = 120,
 
 	leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 },
 
